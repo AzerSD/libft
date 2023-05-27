@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asioud <asioud@student.42.fr>              +#+  +:+       +#+        */
+/*   By: asioud <asioud@42heilbronn.de>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 12:59:15 by asioud            #+#    #+#             */
-/*   Updated: 2023/01/22 08:22:00 by asioud           ###   ########.fr       */
+/*   Updated: 2023/05/27 06:20:31 by asioud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -783,5 +783,9 @@ int		check_duplicates_ht(int *numbers, int count);
  * @param nb The array to be searched.
 */
 int		index_of(int n, int *arr);
+
+int		ft_cubatoi_f(const char *str);
+
+int		ft_cubatoi_r(const char *str);
 
 #endif
