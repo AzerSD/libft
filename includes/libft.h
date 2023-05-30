@@ -6,7 +6,7 @@
 /*   By: asioud <asioud@42heilbronn.de>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 12:59:15 by asioud            #+#    #+#             */
-/*   Updated: 2023/05/27 06:20:31 by asioud           ###   ########.fr       */
+/*   Updated: 2023/05/30 10:56:36 by asioud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -788,4 +788,5 @@ int		ft_cubatoi_f(const char *str);
 
 int		ft_cubatoi_r(const char *str);
 
+void** copy_2d_array(void** array, int rows, int cols, size_t element_size);
 #endif
