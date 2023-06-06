@@ -6,12 +6,12 @@
 #    By: asioud <asioud@42heilbronn.de>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/20 13:12:26 by asioud            #+#    #+#              #
-#    Updated: 2023/05/30 10:54:24 by asioud           ###   ########.fr        #
+#    Updated: 2023/06/03 17:34:27 by asioud           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror -g
 CC = gcc
 GNL	= ./srcs/get_next_line/
 SRCS = 			\
@@ -93,7 +93,8 @@ SRCS = 			\
 				./srcs/ft_strjoin_str2.c \
 				./srcs/error_line.c \
 				./srcs/ft_cubatoi_f.c \
-				./srcs/copy_2d_array.c 
+				./srcs/copy_2d_array.c \
+				./srcs/memory.c 
 
 BONUS_SRCS = 	./bonus/ft_lstadd_back.c \
 				./bonus/ft_lstdelone.c \

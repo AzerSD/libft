@@ -6,7 +6,7 @@
 /*   By: asioud <asioud@42heilbronn.de>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 12:59:15 by asioud            #+#    #+#             */
-/*   Updated: 2023/05/30 10:56:36 by asioud           ###   ########.fr       */
+/*   Updated: 2023/06/04 00:33:31 by asioud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -788,5 +788,21 @@ int		ft_cubatoi_f(const char *str);
 
 int		ft_cubatoi_r(const char *str);
 
-void** copy_2d_array(void** array, int rows, int cols, size_t element_size);
+void**	copy_2d_array(void** array, int rows, int cols, size_t element_size);
+void free_2d_array(void **array, int height);
+typedef struct s_memory_block
+{
+    void                    *adresse;
+    size_t                  size;
+    struct s_memory_block   *next;
+}               t_memory_block;
+
+void    *add_mem_block(void **p_head, size_t size);
+void    remove_mem_block(void **p_head, void *ptr);
+void    *my_malloc(void **p_head, size_t size);
+void    my_free(void **p_head, void *adresse);
+void    free_all_mem(void **p_head);
+void    display_memory(void *p_head);
+
+
 #endif
