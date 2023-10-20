@@ -6,17 +6,21 @@
 /*   By: asioud <asioud@42heilbronn.de>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 12:59:15 by asioud            #+#    #+#             */
-/*   Updated: 2023/06/04 00:33:31 by asioud           ###   ########.fr       */
+/*   Updated: 2023/10/20 04:58:03 by asioud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdint.h>
 # include <stdbool.h>
 # include <stdarg.h>
+
+# include "ANSI-color-codes.h"
+
 # define BUFFER_SIZE 10000
 
 # if defined(__linux__)
