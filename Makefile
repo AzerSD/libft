@@ -3,18 +3,19 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: asioud <asioud@42heilbronn.de>             +#+  +:+       +#+         #
+#    By: userr <userr@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/20 13:12:26 by asioud            #+#    #+#              #
-#    Updated: 2023/06/03 17:34:27 by asioud           ###   ########.fr        #
+#    Updated: 2025/01/28 21:29:43 by userr            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -g
 CC = gcc
 GNL	= ./srcs/get_next_line/
 SRCS = 			\
+				./srcs/argparse.c \
 				./srcs/ft_sqrt.c \
 				./srcs/index_of.c \
 				./srcs/check_duplicates_ht.c \

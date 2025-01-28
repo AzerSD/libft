@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asioud <asioud@42heilbronn.de>             +#+  +:+       +#+        */
+/*   By: userr <userr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 12:59:15 by asioud            #+#    #+#             */
-/*   Updated: 2023/10/20 04:58:03 by asioud           ###   ########.fr       */
+/*   Updated: 2025/01/28 21:28:07 by userr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -808,5 +808,30 @@ void    my_free(void **p_head, void *adresse);
 void    free_all_mem(void **p_head);
 void    display_memory(void *p_head);
 
+
+typedef enum {
+    ARGTYPE_INT,
+    ARGTYPE_STRING,
+    ARGTYPE_FLAG
+} ArgType;
+
+typedef struct {
+    char *short_flag;
+    char *long_flag;
+    ArgType type;
+    void *value;
+} Option;
+
+#define MAX_OPTIONS 20
+#define MAX_POSITIONAL 20
+
+typedef struct {
+    Option options[MAX_OPTIONS];
+    int option_count;
+    char *positional_args[MAX_POSITIONAL];
+    int positional_count;
+} ArgParser;
+
+void parse_arguments(ArgParser *parser, int argc, char *argv[]);
 
 #endif
