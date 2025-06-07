@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   argparse.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: userr <userr@student.42.fr>                +#+  +:+       +#+        */
+/*   By: asioud <asioud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 21:23:43 by userr             #+#    #+#             */
-/*   Updated: 2025/01/28 21:28:43 by userr            ###   ########.fr       */
+/*   Updated: 2025/06/07 20:18:11 by asioud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,23 @@ void print_usage(const ArgParser *parser) {
                opt->long_flag ? opt->long_flag : "");
     }
 }
+
+void free_arg_parser(ArgParser *parser) {
+    for (int i = 0; i < parser->option_count; i++) {
+        Option *opt = &parser->options[i];
+        if (opt->short_flag) {
+            free(opt->short_flag);
+            opt->short_flag = NULL;
+        }
+        if (opt->long_flag) {
+            free(opt->long_flag);
+            opt->long_flag = NULL;
+        }
+    }
+    parser->option_count = 0;
+    parser->positional_count = 0;
+}
+
 
 // int main(int argc, char *argv[]) {
 //     ArgParser parser;
